@@ -11,7 +11,7 @@ With this app, you can play and learn. [Try it now](http://know-your-colleagues.
  3. badges
  4. google auth2 authentication
  5. request colleagues authorization to be included into this game
- 5. more games :
+ 6. more games :
    1. by fundation
    2. by client/location
    3. ...
