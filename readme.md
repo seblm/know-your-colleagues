@@ -15,6 +15,7 @@ With this app, you can play and learn. [Try it now](http://know-your-colleagues.
    1. by fundation
    2. by client/location
    3. ...
+ 7. use linked in to get colleagues
 
 ### Prerequistes
 
