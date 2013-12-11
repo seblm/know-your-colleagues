@@ -1,0 +1,8 @@
+{
+    "name": "know-your-colleagues javascript dependencies",
+    "version": "0.0.1",
+    "dependencies": {
+    	"jquery": "2.0.3",
+        "components-foundation": "5.0.2"
+    }
+}

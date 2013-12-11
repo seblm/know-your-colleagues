@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
 <head>
     <title>Know Your Colleagues</title>
-    <script src="jquery-2.0.3.min.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower_components/components-foundation/css/foundation.min.css">
     <meta charset="UTF-8"/>
 </head>
 <body>
-<h1>Know Your Colleagues</h1>
-
-<div id="score"></div>
-<div id="name"></div>
-<div id="firstImage"></div>
-<div id="secondImage"></div>
+<div class="row">
+    <div class="small-10 columns">
+        <h1 class="text-center">Know Your Colleagues</h1>
+    </div>
+    <div class="small-2 columns">
+        <h3 id="score" class="text-center"></h3>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <h4 class="text-center">Who is <code id="name"></code> ?</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="small-6 columns">
+        <a id="firstImage" class="th right"></a>
+    </div>
+    <div class="small-6 columns">
+        <a id="secondImage" class="th left"></a>
+    </div>
+</div>
 <script>
     $(document).ready(function () {
         var score = 0;
@@ -38,6 +56,10 @@
 
         nextChallenge();
     });
+</script>
+<script src="bower_components/components-foundation/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
 </script>
 </body>
 </html>

@@ -6,7 +6,7 @@ With this app, you can play and learn. [Try it now](http://know-your-colleagues.
 
 ### TODO
 
- 1. decent css (with cute animations)
+ 1. cute animations
  2. storing events and scores to create leaderboard
  3. badges
  4. google auth2 authentication
@@ -18,10 +18,14 @@ With this app, you can play and learn. [Try it now](http://know-your-colleagues.
 
 ### Prerequistes
 
-You need [java8](https://jdk8.java.net/download.html) and [maven](http://maven.apache.org).
+You will need :
+ - [java8](https://jdk8.java.net/download.html)
+ - [maven](http://maven.apache.org)
+ - [bower](http://bower.io)
 
 ### Build
 
+    $ bower install
     $ mvn package
 
 ### Deploy locally
