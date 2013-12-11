@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know Your Colleagues</title>
+    <script src="jquery-2.0.3.min.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Know Your Colleagues</h1>
+
+<div id="score"></div>
+<div id="name"></div>
+<div id="firstImage"></div>
+<div id="secondImage"></div>
+<script>
+    $(document).ready(function () {
+        var score = 0;
+
+        function imageClicked(eventObject) {
+            if ($(eventObject.currentTarget).attr("id") === eventObject.data["answer"]) {
+                score++;
+            } else {
+                score--;
+            }
+            $("#firstImage").off("click", imageClicked).css("cursor", "auto");
+            $("#secondImage").off("click", imageClicked).css("cursor", "auto");
+            nextChallenge();
+        }
+
+        function nextChallenge() {
+            $("#score").text(score);
+            $.getJSON("/challenge", function (challenge) {
+                $("#firstImage").html("<img src=\"" + challenge["firstImage"] + "\"/>").click(challenge, imageClicked).css("cursor", "pointer");
+                $("#secondImage").html("<img src=\"" + challenge["secondImage"] + "\"/>").click(challenge, imageClicked).css("cursor", "pointer");
+                $("#name").html(challenge.name);
+            });
+        }
+
+        nextChallenge();
+    });
+</script>
+</body>
+</html>
